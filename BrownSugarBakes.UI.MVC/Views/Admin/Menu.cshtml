@@ -1,0 +1,59 @@
+﻿@model IEnumerable<BrownSugarBakes.TTR.DATA.EF.Tbl_Product>
+
+@using PagedList;
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="container">
+
+    <div class="menu">
+
+        <h1 class="menu-group-heading">
+            Menu
+        </h1>
+
+        <div class="menu-group">
+
+            @foreach (var item in Model)
+            {
+
+                int count = 1;
+                <div class="menu-item">
+                    <img class="menu-item-image" title="@item.ProductName" style="cursor:pointer; height:160px;width:260px;box-shadow:15px 15px 10px" src="~/ProductImg/@item.ProductImage" />
+                </div>
+                <div class="menu-item-text">
+                    <h3 class="menu-item-heading">
+                        <span class="menu-item-name"><b>@item.ProductName</b></span>
+                        <span class="menu-item-price">$ @item.Price</span>
+                    </h3>
+                    <p class="menu-item-description">
+                        Lorem ipsum dolor
+                        @item.Description
+
+                    </p>
+                    <p class="menu-item-description">
+                        @using (Html.BeginForm("AddToCart", "Admin", new { productId = item.ProductId, url = "Menu" }, FormMethod.Post))
+                        {
+                            <button type="submit" class="pull-right"><i class="fa fa-shopping-cart"></i></button>
+                        }
+
+                    </p>
+
+
+
+                </div>
+                count++;
+
+
+            }
+        </div>
+    </div>
+  
+
+
+</div>

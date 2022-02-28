@@ -1,24 +1,356 @@
-﻿body {
-    padding-top: 50px;
+﻿.navbar {
+    background-color: #000;
+    font-family: 'Chilanka', cursive;
+}
+
+.navbar-right:after {
+    background-color: black;
+}
+
+.navbar-right {
+    padding-left: 0 !important;
+}
+
+.dropdown-toggle {
+    background-color: black !important;
+}
+
+.dropdown-menu a:hover {
+    background-color: white;
+    color: dimgrey !important;
+}
+
+.navigation li a {
+    color: white !important;
+}
+
+.navigation :hover {
+    color: dimgray !important;
+}
+
+.dropdown-menu {
+    background-color: white !important;
+    color: black !important;
+}
+
+    .dropdown-menu a {
+        color: black !important;
+    }
+
+    .dropdown-menu li {
+        color: black !important;
+    }
+
+    .dropdown-menu:hover ul {
+        background-color: white !important;
+        color: black !important;
+    }
+
+.navbar li a {
+    color: black;
+}
+
+
+.navbar ul li a:hover {
+    color: dimgrey;
+}
+
+.navbar-inverse .navbar-brand {
+    color: white !important;
+}
+
+.navbar-toggle ul li a:hover {
+    background-color: black !important;
+}
+
+.navbar-inverse .navbar-brand:hover {
+    color: dimgrey !important;
+}
+
+.navbar-header a {
+    color: white;
+}
+
+.navbar-inverse {
+    background-color: #000;
+}
+
+
+
+
+
+
+body {
+    padding-top: 7em;
     padding-bottom: 20px;
+    background-color: #BF9A84;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+div.firstRow {
+    padding-bottom: 3em;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+
+
+div.thumbnail img:hover {
+    border: 1px solid #777;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+div.menu-container {
+    padding-top: 2em;
+}
+
+
+.product-item {
+    position: relative;
+}
+
+    .product-item .caption h5 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        border-top: 2px solid #333;
+        margin-top: 10px;
+        padding-top: 10px;
+    }
+
+    .product-item .caption .product-item-price {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+    }
+
+
+    .product-item .product-item-badge {
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        padding: 5px 12px 6px;
+        color: #fff;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 600;
+        background: #333;
+        -webkit-border-radius: 4px 0 4px 0;
+        -moz-border-radius: 4px 0 4px 0;
+        -o-border-radius: 4px 0 4px 0;
+        border-radius: 4px 0 4px 0;
+    }
+
+/*footer section*/
+.copyright {
+    font-size: 14px;
+    line-height: 16px;
+    display: inline;
+    font-weight: 400;
+}
+
+    .copyright .copyright-left {
+        text-align: left;
+    }
+
+    .copyright .copyright-right {
+        text-align: right;
+    }
+    
+
+    .copyright .list-social {
+        float: right;
+        margin-top: -10px;
+        display: inline;
+    }
+
+        .copyright .list-social > li {
+            display: inline-block;
+         
+            
+        }
+
+            .copyright .list-social > li > a {
+                display: block;
+                width: 30px;
+                height: 30px;
+                position: relative;
+                background: #ffffff;
+                border: 1px solid #ccc;
+                -webkit-border-radius: 100%;
+                -moz-border-radius: 100%;
+                -o-border-radius: 100%;
+                border-radius: 100%;
+                font-size: 20px;
+                color: #333333;
+            }
+
+                .copyright .list-social > li > a:hover {
+                    background: #333333;
+                    border: 1px solid #333333;
+                    font-size: 20px;
+                    color: #ffffff;
+                }
+
+                .copyright .list-social > li > a .fa {
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    margin-left: -8px;
+                    margin-top: -9px;
+                }
+
+
+
+/*************table view Chekout/Checkout Details*****************/
+
+
+.table, th, tr, td {
+    border: 2px solid !important;
+    border-color: black;
+    border-bottom-color: black;
+    border-bottom: 2px solid;
+}
+/********************************Index Css**************************/
+
+/*************************MENU CSS*********************************/
+.menu {
+    margin-top: 2em;
+    font-family: 'Chilanka', cursive;
+    font-size: 14px;
+}
+
+.menu-group-heading {
+    margin: 0;
+    padding-bottom: 1em;
+    text-decoration: underline solid;
+}
+
+
+.menu-group {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5.5em;
+    padding: 1.5em 0;
+}
+
+.menu-item {
+    display: flex;
+}
+
+
+.menu-item-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-right: 1.5em;
+}
+
+.menu-item-text {
+    flex-grow: 1;
+    border-top: 2px solid #000000;
+    padding-top: 1em;
+}
+
+.menu-item-heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.menu-item-name {
+    margin-right: .5em;
+}
+
+.menu-item-description {
+    line-height: 1.6;
+}
+
+.logo {
+    padding-top: 2em;
+    display: flex;
+    justify-content: center !important;
+}
+
+/*when the screen is larger than 992px*/
+
+@media screen and (min-width:992px) {
+    .menu {
+        font-size: 16px;
+    }
+
+    .menu-group{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .menu-item-image{
+        width: 125px;
+        height: 125px;
+    }
+}
+
+/*when the screen shrinks*/
+
+@media screen and (max-width:992px) {
+    .menu-item-text {
+        flex-grow: 1;
+        border-top: none;
+        padding-top: 1em;
+        border-bottom: 2px solid #000000;
+        margin-bottom:2em;
+        padding-bottom:1em;
+    }
+
+    .menu-item {
+        display: flex;
+        border-top: 0px solid #000000;
+    }
+
+   
+
+    .logo img {
+        width: 800px;
+        height: 290px;
+    }
+
+
+
+    .menu-group {
+        grid-gap: 1.5em;
+    }
+}
+
+@media screen and (max-width:766px) {
+ 
+
+        .logo img {
+            width: 680px;
+            height: 200px;
+        }
+
+    .menu-group {
+        grid-gap: 1.5em;
+    }
+}
+
+@media screen and (max-width:500px) {
+ 
+
+        .logo img {
+            width: 280px;
+            height: 150px;
+        }
+
+    .menu-group {
+        grid-gap: 1.5em;
+    }
+}
+
+/***********About CSS*********************/
+
+.about {
+    padding-bottom: 5em;
 }

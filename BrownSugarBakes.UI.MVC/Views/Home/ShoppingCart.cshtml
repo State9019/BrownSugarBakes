@@ -1,0 +1,59 @@
+﻿@using BrownSugarBakes.UI.MVC.Models.Home
+
+
+@{
+    ViewBag.Title = "ShoppingCart";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>ShoppingCart</h2>
+
+
+<div class="container" style="background-color:white; margin-top:5em; padding-bottom:2em; border:2px solid #000000">
+
+
+    <h2 style="font-family: 'Chilanka', cursive;">Manage Cart</h2>
+    @if (Session["cart"] == null)
+    {
+        <div class="alert alert-danger">
+            <strong>No product added to cart!</strong>
+        </div>
+
+    }
+    else
+    {
+        <table class="table" style="font-family: 'Chilanka', cursive;">
+            <thead style="border-color: black; ">
+                <tr style="text-align:center !important;">
+                    <th><b>Product</b></th>
+                    <th><b>Quantity</b></th>
+                    <th><b>Add</b></th>
+                    @*<th><b>Remove Item</b></th>*@
+                </tr>
+            </thead>
+            <tbody style="border-color: black;">
+                @foreach (Item item in (List<Item>)Session["cart"])
+                {
+                    <tr>
+                        <td><b>@item.Product.ProductName</b></td>
+                        <td><b>@item.Quantity</b></td>
+
+                        <td>
+                            <a href="@Url.Action("AddToCart", "Home", new { productId = item.Product.ProductId, url= "ShoppingCart" })">
+                                <i class="fa fa-plus"></i>
+                            </a>
+                            <a href="@Url.Action("DecreaseQty", "Home", new { productId = item.Product.ProductId, url= "ShoppingCart"  })">
+                                <i class="fa fa-minus"></i>
+                            </a>
+
+                        </td>
+                        
+                    </tr>
+                }
+
+            </tbody>
+        </table>
+        <a class="btn btn-success" href="@Url.Action("ShippingInfo","Home")">Checkout >></a>
+
+    }
+</div>
