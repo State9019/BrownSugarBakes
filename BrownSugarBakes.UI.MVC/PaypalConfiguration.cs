@@ -15,8 +15,8 @@ namespace BrownSugarBakes.UI.MVC
         static PaypalConfiguration()
         {
             var config = getconfig();
-            clientId = "AX-QOReonFey-DMx8AjRAQD_9F0I6lZcxVRfd3lndYDPDUiP7KmBT3KuNk0LRrJ7PGXS2lDLLm6XHTvE";
-            clientSecret = "EF-0uJRq4Y-GKFFlKcUdMYes9Cp9u_KUO1owuHDPeajAQ1jdyVVK5BZljQh5BTHg9a_zseOEAiCeMXdM";
+            clientId = "******************************************************************************";
+            clientSecret = "******************************************************************************";
         }
 
         private static Dictionary<string, string> getconfig()
